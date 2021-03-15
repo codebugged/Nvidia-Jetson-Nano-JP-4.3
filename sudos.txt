@@ -1,0 +1,11 @@
+sudo apt-get install ffmpeg libavcodec-extra
+wget https://github.com/Tony607/jetson_nano_trt_tf_ssd/raw/master/packages/jetpack4.3/tensorrt.tar.gz -O /opt/tensorrt.tar.gz
+tar -xzf /opt/tensorrt.tar.gz -C /usr/local/lib/python3.6/dist-packages/
+wget https://github.com/Tony607/jetson_nano_trt_tf_ssd/raw/master/packages/jetpack4.3/libflattenconcat.so -O /opt/libflattenconcat.so
+sudo apt-get update && apt-get install -y python3-pip pkg-config
+sudo apt-get install -y python3-flask python3-opencv python3-scipy python3-matplotlib
+export CPATH=$CPATH:/usr/local/cuda-10.0/targets/aarch64-linux/include
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/cuda-10.0/targets/aarch64-linux/lib
+pip3 install pycuda --user
+pip3 install pydub
+sudo apt-get install -y gstreamer-1.0
